@@ -1,4 +1,11 @@
+@font-face {
+    font-family: "Roboto";
+    src: url('Assets/fonts/Roboto-Regular.ttf');
+    }
+
 body{
+    font-family: "Roboto";
+
     color: white;
     background-color:  rgb(21, 21, 26);
 
@@ -8,9 +15,8 @@ body{
     font-size: large;
 
     display: grid;
-    grid-template-rows: 70px auto 30px
+    grid-template-rows: 70px auto min-content
 }
-
 header{
     color: white;
     background-color: rgb(5, 5, 10);
@@ -37,8 +43,12 @@ header{
     align-items: center;
 }
 #myPicture{
+    margin: 10px;
+
     height: 100px;
     width: 100px;
+
+    box-shadow: 0 0 10px 0 black;
 
     border: 3px  white solid;
     border-radius: 50px;
@@ -46,20 +56,25 @@ header{
 #myInfo{
     background-color: rgb(40, 40, 45);
 
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    /*display: grid;
+    grid-template-columns: 1fr 1fr 1fr;*/
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 #footer{
-    color: white;
+    color: rgb(149, 149, 149);
     background-color:  rgb(5, 5, 10);
 
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 
     justify-content: center;
     align-items: center;
 
     gap: 20px;
+    padding: 10px;
+    margin: 0;
 }
 
 .footerLogo{
@@ -88,6 +103,8 @@ header{
 .listTitle{
     font-size: xx-large;
 
+    padding: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
 }
@@ -95,12 +112,24 @@ header{
     color: white;
     background-color:  rgb(21, 21, 26);;
 
+    padding: 20px;
     margin: 10px;
     border: 3px white solid; 
     border-radius: 30px;
+
+    box-shadow: 0 0 10px 0 black;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    flex-grow: 1;
 }
 
 a{
     text-decoration: none;
     color: inherit;
+}
+ul{
+    margin: 10px;
+    padding: 10px;
 }
